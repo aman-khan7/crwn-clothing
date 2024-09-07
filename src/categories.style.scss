@@ -1,0 +1,25 @@
+// .categories-container {
+//     background-color:black;
+//     padding:10px;
+
+//     .category-container{
+//         background-color:aqua;
+//         padding:20px
+
+//     }
+//         .category-body-container{
+//             background-color:bisque;
+//             padding:30px;
+//         }
+
+
+// }
+
+.categories-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  
