@@ -1,4 +1,4 @@
-import { Category } from "../../App";
+import { Category } from "../../routes/home/home.components";
 import CategoryItem from "../category-item/category";
 
 const Directory = ({ categories }: Readonly<{ categories: Category[] }>) => {

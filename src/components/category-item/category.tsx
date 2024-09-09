@@ -1,4 +1,4 @@
-import { Category } from "../../App";
+import { Category } from "../../routes/home/home.components";
 import "./category-item.style.scss";
 
 const CategoryItem = ({ category }: Readonly<{ category: Category }>) => {
