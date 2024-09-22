@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
 import App from "./App";
+import { UserProvider } from "./components/contexts/user.context";
+import { ProductProvider } from "./components/contexts/products.context";
+import { CartProvider } from "./components/contexts/cart.context";
+
+import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -12,7 +16,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <ProductProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductProvider>
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
