@@ -1,17 +1,17 @@
 import { Category } from "../../routes/home/home.components";
-import "./category-item.style.scss";
+import "./directory-item.style.scss";
 
-const CategoryItem = ({ category }: Readonly<{ category: Category }>) => {
+const DirectoryItem = ({ category }: Readonly<{ category: Category }>) => {
   const { imageUrl, title } = category;
   return (
-    <div className="category-container">
+    <div className="directory-item-container">
       <div
         className="background-image"
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className="category-body-container">
+      <div className="body">
         <h2>{title}</h2>
         <p>Shop now</p>
       </div>
@@ -19,4 +19,4 @@ const CategoryItem = ({ category }: Readonly<{ category: Category }>) => {
   );
 };
 
-export default CategoryItem;
+export default DirectoryItem;

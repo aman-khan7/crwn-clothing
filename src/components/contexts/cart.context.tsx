@@ -1,8 +1,7 @@
 import { PropsWithChildren, createContext, useEffect, useState } from "react";
 import CartItem from "../cart-item/cart-item.components";
-import { Product } from "./products.context";
-
-export type CartItem = Product & { quantity: number };
+import { Product } from "./categories.context";
+export type CartItem = any;
 
 const addCardItem = (cartItems: CartItem[], productToAdd: Product) => {
   const existingCartItem = cartItems.find(
