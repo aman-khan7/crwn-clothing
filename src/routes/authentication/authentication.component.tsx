@@ -1,6 +1,6 @@
 // import { useEffect } from "react";
 // import { getRedirectResult } from "firebase/auth";
-import "./authentication.styles.scss";
+import { AuthenticationContainer } from "./authentication.styles";
 import {
   auth,
   signInWithGoolePopup,
@@ -32,10 +32,10 @@ const Authentication = () => {
     <div>
       <h1>Sign In Page</h1>
       {/* <div style={{ display: "flex", justifyContent: "space-between" }}> */}
-      <div className="authentication-container">
+      <AuthenticationContainer>
         <SignInForm />
         <SignUpForm />
-      </div>
+      </AuthenticationContainer>
       {/* </div> */}
       {/* <button onClick={signInWithGooleRedirect}>
         Sign In With Google Redirect
