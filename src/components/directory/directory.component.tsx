@@ -1,4 +1,3 @@
-import { Category } from "../../routes/home/home.components";
 import DirectoryItem from "../directory-item/directory-item.component";
 
 export const categories = [
