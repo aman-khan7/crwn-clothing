@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import App from "./App";
-import { UserProvider } from "./components/contexts/user.context";
-import { CategoriesProvider } from "./components/contexts/categories.context";
-import { CartProvider } from "./components/contexts/cart.context";
+import { UserProvider } from "./contexts/user.context";
+import { CategoriesProvider } from "./contexts/categories.context";
+import { CartProvider } from "./contexts/cart.context";
 
 import "./index.css";
 

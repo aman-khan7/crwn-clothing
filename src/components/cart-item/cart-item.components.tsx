@@ -1,4 +1,4 @@
-import { CartItem as CartItemType } from "../contexts/cart.context";
+import { CartItem as CartItemType } from "../../contexts/cart.context";
 import { CartItemContainer, ItemDetails, Name } from "./cart-item.styles";
 
 const CartItem = ({ cartItem }: { cartItem: CartItemType }) => {

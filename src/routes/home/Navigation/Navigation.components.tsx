@@ -2,8 +2,8 @@ import { Fragment, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "../../../assets/crown.svg";
 import CardIcon from "../../../components/card-icon/card-icon.components";
-import { UserContext } from "../../../components/contexts/user.context";
-import { CartContext } from "../../../components/contexts/cart.context";
+import { UserContext } from "../../../contexts/user.context";
+import { CartContext } from "../../../contexts/cart.context";
 import {
   NavigationContainer,
   NavLinks,

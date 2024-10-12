@@ -1,3 +1,4 @@
+import { Product } from "../../contexts/categories.context";
 import ProductCard from "../product-card/product-card.components";
 import {
   CategoryPreviewContainer,
@@ -5,7 +6,13 @@ import {
   Preview,
 } from "./category-preview.styles";
 
-const CategoryPreview = ({ title, products }: any) => {
+const CategoryPreview = ({
+  title,
+  products,
+}: {
+  title: string;
+  products: Product[];
+}) => {
   return (
     <CategoryPreviewContainer>
       <h2>
@@ -13,8 +20,8 @@ const CategoryPreview = ({ title, products }: any) => {
       </h2>
       <Preview>
         {products
-          .filter((_: any, idx: any) => idx < 4)
-          .map((product: any) => (
+          .filter((_, idx) => idx < 4)
+          .map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
       </Preview>

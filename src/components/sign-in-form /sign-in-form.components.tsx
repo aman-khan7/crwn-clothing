@@ -28,7 +28,9 @@ const SignInForm = () => {
     await signInWithGoolePopup();
   };
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
+    event
+  ) => {
     event.preventDefault();
 
     try {
@@ -43,7 +45,7 @@ const SignInForm = () => {
     } catch (error) {}
   };
 
-  const handleChange = (event: any) => {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     const { name, value } = event.target;
 
     setFormFields({ ...formFields, [name]: value });
