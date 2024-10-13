@@ -2,13 +2,11 @@ import { useState } from "react";
 import FormInput from "../form-input/form-input.components";
 import {
   signInWithGoolePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.components";
 import "./sign-in-form.styles.scss";
-import { OperationType } from "firebase/auth";
 
 const defaultFormFields = {
   email: "",
@@ -18,8 +16,6 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);

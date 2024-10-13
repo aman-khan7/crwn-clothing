@@ -21,7 +21,6 @@ import {
   query,
   getDocs,
 } from "firebase/firestore";
-import { title } from "process";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBI71xXFOfF2yYmUoux3_AF-bfIYCDUDDI",
@@ -33,6 +32,7 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
+console.log(firebaseApp);
 const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({
