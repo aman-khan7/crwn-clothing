@@ -1,13 +1,17 @@
+import { UserCredential } from "firebase/auth";
 import { USER_ACTION_TYPES } from "./user.types";
 
-const INITIAL_STATE = {
+type UserState = {
+  currentUser: UserCredential["user"] | null;
+};
+const INITIAL_STATE: UserState = {
   currentUser: null,
 };
 
 export const userReducer = (
   state = INITIAL_STATE,
   action: { type: string; payload: any }
-) => {
+): UserState => {
   const { type, payload } = action;
 
   switch (type) {

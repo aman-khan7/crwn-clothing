@@ -1,4 +1,4 @@
-import { Product } from "../../contexts/categories.context";
+import { Product } from "../../store/cart/cart.reducer";
 import ProductCard from "../product-card/product-card.components";
 import {
   CategoryPreviewContainer,

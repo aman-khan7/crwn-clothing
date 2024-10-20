@@ -28,6 +28,7 @@ const Button = ({
   { buttonType?: ButtonTypeValues } & React.HTMLAttributes<HTMLButtonElement> &
     React.ButtonHTMLAttributes<HTMLButtonElement>
 >) => {
+  console.log();
   const CustomButton = getButton(buttonType);
   return <CustomButton {...otherProps}>{otherProps.children}</CustomButton>;
 };
