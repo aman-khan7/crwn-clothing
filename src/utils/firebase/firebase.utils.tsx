@@ -59,7 +59,7 @@ export const addCollectionAndDocuments = async (
   console.log("done");
 };
 
-export const getCategoriesAndDocuments = async () => {
+export const getCategoriesAndDocuments = async (d?: string) => {
   const collectionRef = collection(db, "categories");
   const q = query(collectionRef);
 

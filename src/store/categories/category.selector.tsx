@@ -1,3 +1,4 @@
+import { categories } from "../../components/directory/directory.component";
 import { RootState } from "../store";
 import { createSelector } from "reselect";
 
@@ -16,4 +17,9 @@ export const selectCategoriesMap = createSelector(
       acc[title.toLowerCase() as keyof typeof acc] = items;
       return acc;
     }, {} as any)
+);
+
+export const selectCategoriesIsLoading = createSelector(
+  [selectCategoryReducer],
+  (categoriesSlice) => categoriesSlice.isLoading
 );
