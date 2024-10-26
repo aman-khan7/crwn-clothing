@@ -1,4 +1,3 @@
-import { categories } from "../../components/directory/directory.component";
 import { RootState } from "../store";
 import { createSelector } from "reselect";
 

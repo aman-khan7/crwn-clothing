@@ -6,6 +6,7 @@ import {
   selectCartItems,
   selectCartTotal,
 } from "../../store/cart/cart.selector";
+
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);

@@ -1,27 +1,24 @@
-import { UserCredential } from "firebase/auth";
-import { USER_ACTION_TYPES } from "./user.types";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type UserState = {
-  currentUser: UserCredential["user"] | null;
+  currentUser: { email: string } | null;
 };
 const INITIAL_STATE: UserState = {
   currentUser: null,
 };
 
-export const userReducer = (
-  state = INITIAL_STATE,
-  action: { type: string; payload: any }
-): UserState => {
-  const { type, payload } = action;
+export const userSlice = createSlice({
+  name: "user",
+  initialState: INITIAL_STATE,
+  reducers: {
+    setCurrentUser(
+      state: UserState,
+      action: PayloadAction<{ email: string } | null>
+    ) {
+      state.currentUser = action.payload;
+    },
+  },
+});
 
-  switch (type) {
-    case USER_ACTION_TYPES.SET_CURRENT_USER:
-      return {
-        ...state,
-
-        currentUser: payload,
-      };
-    default:
-      return state;
-  }
-};
+export const { setCurrentUser } = userSlice.actions;
+export const userReducer = userSlice.reducer;
